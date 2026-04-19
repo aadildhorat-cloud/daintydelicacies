@@ -2511,7 +2511,7 @@ gtag('config', 'G-DTPGZ964FD');
                 document.getElementById('aiChatPanel').classList.remove('active');
             }
         });
-        // === SLIDER ===
+   // === SLIDER ===
 fetch('slider.html')
 .then(res => res.ok ? res.text() : Promise.reject('slider.html not found'))
 .then(html => {
@@ -2527,6 +2527,11 @@ fetch('slider.html')
         fadeEffect: { crossFade: true }
     });
 })
+.catch(err => {
+    console.error('Slider error:', err);
+    document.getElementById('slider-container').innerHTML = `<div style="text-align:center;padding:40px;color:#8B4513;">⚠️ Slider unavailable</div>`;
+});
+
     </script>
 </body>
 </html>
