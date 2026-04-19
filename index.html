@@ -23,6 +23,7 @@ gtag('config', 'G-DTPGZ964FD');
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
     <style>
+        
         /* === CSS VARIABLES - MATCHING LOGO COLORS === */
         :root {
             --primary-color: #6B4423;
@@ -1934,12 +1935,12 @@ gtag('config', 'G-DTPGZ964FD');
         <h2 class="section-title">Promo Boxes</h2>
         <div class="products-grid">
             <div class="product-card" data-id="pb1" data-name="Box of 6 Mini Carrot Cakes" data-price="100" data-description="Perfect gift box with 6 mini carrot cakes">
-                <img src="https://via.placeholder.com/400x400/F5E6E6/6B4423?text=Box+6+Carrot" alt="Box of 6 Carrot Cakes" class="product-image">
+                <img src="images/box6.jpg" alt="Box of 6 Carrot Cakes" class="product-image">
                 <div class="product-info">
                     <div class="product-name">Box of 6 Mini Carrot Cakes</div>
                     <div class="product-description">Perfect gift box with 6 mini carrot cakes</div>
                     <div class="product-price">R100</div>
-                    <button class="add-to-cart-btn" onclick="cart.addToCart({id:'pb1', name:'Box of 6 Mini Carrot Cakes', price:100, quantity:1, image:'https://via.placeholder.com/400x400/F5E6E6/6B4423?text=Box+6+Carrot'})">Add to Cart</button>
+                    <button class="add-to-cart-btn" onclick="cart.addToCart({id:'pb1', name:'Box of 6 Mini Carrot Cakes', price:100, quantity:1, image:'images/box6.jpg'})">Add to Cart</button>
                 </div>
             </div>
 
@@ -2048,39 +2049,44 @@ gtag('config', 'G-DTPGZ964FD');
         </div>
     </div>
 
-    <!-- FLOATING BUTTONS -->
-    <div class="floating-contact">
-        <button class="float-btn ai-chat-widget" id="aiChatWidget" onclick="toggleAIChat()">
-            <i class="fas fa-robot"></i>
-        </button>
-        <button class="float-btn whatsapp-float" onclick="window.open('https://wa.me/27840967330', '_blank')">
-            <i class="fab fa-whatsapp"></i>
-        </button>
-    </div>
+   <!-- FLOATING BUTTONS -->
+<div class="floating-contact">
+    <button class="float-btn ai-chat-widget" id="aiChatWidget" onclick="toggleAIChat()">
+        <img src="images/bee.jpg" alt="Ask Beelal AI" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    </button>
+    <button class="float-btn whatsapp-float" onclick="window.open('https://wa.me/27840967330', '_blank')">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+</div>
 
     <!-- AI CHAT PANEL -->
-    <div class="ai-chat-panel" id="aiChatPanel">
-        <div class="ai-chat-header">
-            <div style="display: flex; align-items: center;">
-                <img src="images-logo/bee.jpg" alt="AI Assistant" class="ai-avatar">
-                <h4>Ask Delilah</h4>
-            </div>
-            <button id="aiCloseBtn" onclick="toggleAIChat()">
-                <i class="fas fa-times"></i>
-            </button>
+<div class="ai-chat-panel" id="aiChatPanel">
+    <div class="ai-chat-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="images/bee.jpg" alt="Beelal Avatar" class="ai-avatar" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid white;">
+            <h4>Ask Beelal</h4>
         </div>
-        <div class="ai-chat-messages" id="aiChatMessages">
-            <div class="ai-message bot">
-                Hello! 👋 I'm Delilah, your Dainty Delicacies assistant. How can I help you today?
-            </div>
-        </div>
-        <div class="ai-chat-input">
-            <input type="text" id="aiUserInput" placeholder="Ask me anything..." onkeypress="handleAIKeyPress(event)">
-            <button id="aiSendBtn" onclick="sendAIMessage()">
-                <i class="fas fa-paper-plane"></i>
-            </button>
+        <button id="aiCloseBtn" onclick="toggleAIChat()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="ai-chat-messages" id="aiChatMessages">
+        <div class="ai-message bot">
+            Hello! 👋 I'm <strong>Beelal</strong>, your <strong>Dainty Delicacies</strong> assistant.<br>
+            You can ask me things like:<br>
+            • "What are your opening hours?"<br>
+            • "Where are you located?"<br>
+            • "What is your contact information?"<br>
+            • "How do I place an order?"
         </div>
     </div>
+    <div class="ai-chat-input">
+        <input type="text" id="aiUserInput" placeholder="e.g. tell me about Dainty Delicacies..." onkeypress="handleAIKeyPress(event)">
+        <button id="aiSendBtn" onclick="sendAIMessage()">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
 
     <!-- FOOTER -->
     <footer>
